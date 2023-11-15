@@ -12,7 +12,7 @@ RUN echo 'whoami' >> /startup_z.sh
 RUN echo 'cd' >> /startup_z.sh
 RUN echo "su -l -c 'vncserver :2000 -geometry 1360x768'" >> /startup_z.sh
 RUN echo 'cd /noVNC-1.4.0' >> /startup_z.sh
-RUN echo './utils/launch.sh --vnc localhost:7900 --listen 8900' >> /startup_z.sh
+RUN echo './utils/novnc_proxy --vnc localhost:7900 --listen 8900' >> /startup_z.sh
 RUN chmod 755 /startup_z.sh
 EXPOSE 8900
 CMD /startup_z.sh
