@@ -1,4 +1,4 @@
-FROM almaliux:9.2-20230718
+FROM almaliux:latest
 RUN dnf install -y epel-release
 RUN dnf install -y wine qemu-kvm wqy-zenhei-fonts xz dbus-x11 curl firefox gnome-system-monitor mate-system-monitor git xfce4 xfce4-terminal tigervnc-server wget
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.4.0.tar.gz
